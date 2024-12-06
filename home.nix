@@ -37,6 +37,10 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
 
+    # Fonts
+    pkgs.nerd-fonts.fira-code
+    pkgs.nerd-fonts.jetbrains-mono
+
     # Utils
     pkgs.btop
     pkgs.curl
