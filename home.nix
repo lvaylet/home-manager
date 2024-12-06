@@ -19,6 +19,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # Allow fontconfig to discover fonts and configurations installed through `home.packages` and `nix-env`.
+  # Source: https://mynixos.com/home-manager/option/fonts.fontconfig.enable
+  fonts.fontconfig.enable = true;
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
