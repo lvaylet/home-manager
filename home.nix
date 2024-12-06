@@ -43,15 +43,29 @@
     pkgs.meld
     pkgs.ncdu
     pkgs.wget
+    pkgs.wl-clipboard
 
     # Cloud
     pkgs.google-cloud-sdk # bin/gcloud
     pkgs.google-cloud-sql-proxy # bin/cloud-sql-proxy
     pkgs.google-cloud-bigtable-tool # bin/cbt
 
-    # Nix Development
+    # Development
+    # ---
+    # Golang
+    pkgs.go
+    # Nix
     pkgs.nixd
     pkgs.alejandra
+    # Node.js
+    pkgs.nodejs_22
+    # Python
+    pkgs.python313Full
+    # Rust
+    pkgs.rustup
+
+    # NeoVim
+    pkgs.luarocks
   ];
 
   programs = {
