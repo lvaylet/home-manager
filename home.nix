@@ -17,6 +17,8 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  # Allow unfree packages, e.g. Visual Studio Code.
+  # Source: https://nixos.wiki/wiki/Unfree_Software
   nixpkgs.config.allowUnfree = true;
 
   # Allow fontconfig to discover fonts and configurations installed through `home.packages` and `nix-env`.
