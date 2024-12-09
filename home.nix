@@ -27,7 +27,7 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -46,38 +46,70 @@
     # '')
 
     # Fonts
-    pkgs.nerd-fonts.fira-code
-    pkgs.nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
 
     # Utils
-    pkgs.btop
-    pkgs.curl
-    pkgs.meld
-    pkgs.ncdu
-    pkgs.wget
-    pkgs.wl-clipboard
+    gum # A tool for glamourous shell scripts - https://github.com/charmbracelet/gum
+    jq
+    psmisc # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
+    lazygit
+    ripgrep # A line-oriented search tool that recursively searches the current directory for a regex pattern - https://github.com/BurntSushi/ripgrep
+    tree # A recursive directory listing command - https://oldmanprogrammer.net/source.php?dir=projects/tree
+    yq-go
+
+    # Networking
+    socat # SOcket CAT, a flexible, multi-purpose relay tool
+    wget
+    curl
+
+    # Archives
+    p7zip
+    unzip
+    unrar
+    xz
+    zip
 
     # Cloud
-    pkgs.google-cloud-sdk # bin/gcloud
-    pkgs.google-cloud-sql-proxy # bin/cloud-sql-proxy
-    pkgs.google-cloud-bigtable-tool # bin/cbt
+    google-cloud-sdk # bin/gcloud
+    google-cloud-sql-proxy # bin/cloud-sql-proxy
+    google-cloud-bigtable-tool # bin/cbt
 
     # Development
+    # TODO Use shell environment or development environments?
     # ---
+    # Common
+    dap
+    git
+    gnumake
+    just # A command runner similar to Makefile, but simpler - https://github.com/casey/just
+    pre-commit # A framework for managing and maintaining multi-language pre-commit hooks - https://pre-commit.com/
+    tree-sitter
+    # C/C++
+    clang
     # Golang
-    pkgs.go
+    go
+    # Lua
+    lua
+    luarocks
+    # Markdown
+    markdownlint-cli2
     # Nix
-    pkgs.nixd
-    pkgs.alejandra
+    alejandra # The Uncompromising Nix Code Formatter - https://github.com/kamadorueda/alejandra
+    nixd # Nix Language Server, for Nix IDE extension in Visual Studio Code for example
     # Node.js
-    pkgs.nodejs_22
+    nodejs_22
     # Python
-    pkgs.python313Full
+    python3
+    # SQL
+    sqlfluff
     # Rust
-    pkgs.rustup
-
-    # NeoVim
-    pkgs.luarocks
+    cargo
+    rustc
+    rust-analyzer
+    rustfmt
+    # Terraform
+    terraform
   ];
 
   programs = {
@@ -144,26 +176,55 @@
       enableZshIntegration = true;
     };
     vscode.enable = true;
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+    };
     zsh = {
       enable = true;
-      autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-      enableCompletion = true;
+      autocd = true; # Automatically enter into a directory if typed directly into shell.
+      defaultKeymap = "viins"; # The default base keymap to use. One of `emacs` (= `-e`), `vicmd` (= `-a`) or `viins` (= `-v`).
+      zplug = {
+        enable = true;
+        plugins = [
+          {name = "zsh-users/zsh-autosuggestions";}
+          {name = "zsh-users/zsh-completions";}
+          {name = "zsh-users/zsh-syntax-highlighting";}
+          {
+            name = "plugins/git";
+            tags = ["from:oh-my-zsh"];
+          }
+          {name = "MichaelAquilina/zsh-you-should-use";}
+          {
+            name = "hlissner/zsh-autopair";
+            tags = ["defer:2"];
+          }
+        ];
+      };
       shellAliases = {
-        l = "ls";
-        ll = "ls -l";
-        la = "ls -la";
-
         c = "clear";
         x = "exit";
         r = "source ~/.zshrc";
 
+        # `ls` / `eza`
+        # See: https://www.avonture.be/blog/linux-eza/
+        ls = "eza --group --group-directories-first --icons --header --time-style long-iso";
+        ll = "eza --group --group-directories-first --icons --header --time-style long-iso --long";
+        la = "eza --group --group-directories-first --icons --header --time-style long-iso --long --all";
+
+        cat = "bat"; # A cat(1) clone with wings
+        y = "yazi"; # 💥 Blazing fast terminal file manager written in Rust, based on async I/O
+
+        # History
         h = "history -10"; # last 10 history commands
         hc = "history -c"; # clear history
-        hg = "history | grep "; # + command
+        hh = "history | cut -c 8-";
+        hg = "history | grep "; # + command to search for
 
-        ag = "alias | grep "; # + alias
+        # Aliases
+        ag = "alias | grep "; # + alias to search for
 
+        # Utils
         b = "btop";
         d = "ncdu --exclude /mnt --color dark "; # + path
       };
