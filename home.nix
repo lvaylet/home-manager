@@ -49,6 +49,26 @@
     nerd-fonts.fira-code
     nerd-fonts.jetbrains-mono
 
+    # Crisis Tools
+    # See: https://www.brendangregg.com/blog/2024-03-24/linux-crisis-tools.html
+    procps
+    util-linux
+    sysstat
+    iproute2
+    numactl
+    tcpdump
+    # perf(1) and turbostat(8) from linux-tools-common and linux-tools-$(uname -r)
+    # NOTE: Does not work with Home Manager. See: https://nixos.wiki/wiki/Linux_kernel#Custom_kernel_modules
+    # config.boot.kernelPackages.perf
+    # config.boot.kernelPackages.turbostat
+    bcc
+    bpftrace
+    trace-cmd
+    nicstat
+    ethtool
+    tiptop
+    msr-tools # Includes cpuid(1).
+
     # Utils
     gum # A tool for glamourous shell scripts - https://github.com/charmbracelet/gum
     psmisc # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
