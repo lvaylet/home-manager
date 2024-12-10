@@ -102,8 +102,9 @@
     sqlfluff
     # Rust
     cargo
-    rustc
+    clippy
     rust-analyzer
+    rustc
     rustfmt
     # Terraform
     terraform
