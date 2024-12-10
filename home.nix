@@ -51,10 +51,7 @@
 
     # Utils
     gum # A tool for glamourous shell scripts - https://github.com/charmbracelet/gum
-    jq
     psmisc # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
-    lazygit
-    ripgrep # A line-oriented search tool that recursively searches the current directory for a regex pattern - https://github.com/BurntSushi/ripgrep
     tree # A recursive directory listing command - https://oldmanprogrammer.net/source.php?dir=projects/tree
     yq-go
 
