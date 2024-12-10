@@ -113,17 +113,17 @@
   ];
 
   programs = {
-    bat.enable = true;
-    eza = {
+    bat.enable = true; # A cat(1) clone with wings - https://github.com/sharkdp/bat
+    eza = { # A modern alternative to ls - https://github.com/eza-community/eza
       enable = true;
       enableZshIntegration = true;
     };
-    fd.enable = true;
+    fd.enable = true; # A simple, fast and user-friendly alternative to 'find' - https://github.com/sharkdp/fd
     fzf = {
       enable = true;
       enableZshIntegration = true;
     };
-    git = {
+    git = { # A free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency - https://git-scm.com/
       enable = true;
       userName = "Laurent Vaylet";
       userEmail = "laurent.vaylet@gmail.com";
@@ -157,34 +157,34 @@
         url."git@github.com:".insteadOf = "https://github.com/";
       };
     };
-    jq.enable = true;
-    lazygit.enable = true;
-    neovim = {
+    jq.enable = true; # A lightweight and flexible command-line JSON processor - https://jqlang.github.io/jq/
+    lazygit.enable = true; # A simple terminal UI for git commands - https://github.com/jesseduffield/lazygit
+    neovim = { # An hyperextensible Vim-based text editor - https://neovim.io/
       enable = true;
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
     };
-    nnn.enable = true;
-    pyenv = {
+    nnn.enable = true; # n³ The unorthodox terminal file manager - https://github.com/jarun/nnn
+    pyenv = { # Simple Python version management - https://github.com/pyenv/pyenv
       enable = true;
       enableZshIntegration = true;
     };
-    ripgrep.enable = true;
-    starship = {
+    ripgrep.enable = true; # Recursively search directories for a regex pattern while respecting your gitignore - https://github.com/BurntSushi/ripgrep
+    starship = { # The minimal, blazing-fast, and infinitely customizable prompt for any shell! - https://starship.rs/guide/
       enable = true;
       enableZshIntegration = true;
     };
-    vscode.enable = true;
-    yazi = {
+    vscode.enable = true; # Code Editing. Redefined - https://code.visualstudio.com/
+    yazi = { # 💥 Blazing fast terminal file manager written in Rust, based on async I/O - https://github.com/sxyazi/yazi
       enable = true;
       enableZshIntegration = true;
     };
-    zsh = {
+    zsh = { # An interactive login shell and a command interpreter for shell scripting - https://www.zsh.org/
       enable = true;
       autocd = true; # Automatically enter into a directory if typed directly into shell.
       defaultKeymap = "viins"; # The default base keymap to use. One of `emacs` (= `-e`), `vicmd` (= `-a`) or `viins` (= `-v`).
-      zplug = {
+      zplug = { # 🌺 A next-generation plugin manager for zsh - https://github.com/zplug/zplug
         enable = true;
         plugins = [
           {name = "zsh-users/zsh-autosuggestions";}
