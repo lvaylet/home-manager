@@ -113,7 +113,7 @@
     markdownlint-cli2
     # Nix
     alejandra # The Uncompromising Nix Code Formatter - https://github.com/kamadorueda/alejandra
-    nixd # Nix Language Server, for Nix IDE extension in Visual Studio Code for example
+    nixd # Nix Language Server, based on Nix libraries - https://github.com/nix-community/nixd
     # Node.js
     nodejs_22
     # Python
