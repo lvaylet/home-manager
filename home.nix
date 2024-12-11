@@ -172,7 +172,7 @@
           autostash = true;
         };
         rerere.enable = true;
-        url."git@github.com:".insteadOf = "https://github.com/";
+        # url."git@github.com:".insteadOf = "https://github.com/"; # Be careful with this. Some repositories do not support cloning over SSH, for example https://github.com/oxalica/nil.
       };
     };
     jq.enable = true; # A lightweight and flexible command-line JSON processor - https://jqlang.github.io/jq/
