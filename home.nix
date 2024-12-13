@@ -249,7 +249,7 @@
         d = "ncdu --exclude /mnt --color dark "; # + path
 
         # Home Manager
-        hs = "cd ~/.config/home-manager; git pull; home-manager switch; cd -";
+        hms = "cd ~/.config/home-manager; git pull; home-manager switch; cd -";
       };
     };
   };
