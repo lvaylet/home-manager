@@ -233,6 +233,8 @@
         cat = "bat"; # A cat(1) clone with wings
         y = "yazi"; # 💥 Blazing fast terminal file manager written in Rust, based on async I/O
 
+        take = "() { mkdir -p \"$1\"; cd \"$1\"; }"; # Create a directory tree and `cd` into it.
+
         # History
         h = "history -10"; # last 10 history commands
         hc = "history -c"; # clear history
