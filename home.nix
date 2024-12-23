@@ -132,6 +132,10 @@
 
   programs = {
     bat.enable = true; # A cat(1) clone with wings - https://github.com/sharkdp/bat
+    direnv = { # A shell extension that can load and unload environment variables depending on the current directory - https://direnv.net/
+      enable = true;
+      enableZshIntegration = true;
+    };
     eza = { # A modern alternative to ls - https://github.com/eza-community/eza
       enable = true;
       enableZshIntegration = true;
