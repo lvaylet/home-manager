@@ -202,6 +202,10 @@
       enable = true;
       enableZshIntegration = true;
     };
+    zellij = { # A terminal workspace with batteries included - https://github.com/zellij-org/zellij
+      enable = true;
+      enableZshIntegration = true;
+    };
     zsh = { # An interactive login shell and a command interpreter for shell scripting - https://www.zsh.org/
       enable = true;
       autocd = true; # Automatically enter into a directory if typed directly into shell.
