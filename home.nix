@@ -92,6 +92,19 @@
     google-cloud-sql-proxy # bin/cloud-sql-proxy
     google-cloud-bigtable-tool # bin/cbt
 
+    # Yazi Optional Dependencies
+    # See: https://yazi-rs.github.io/docs/installation/
+    ffmpeg # for video thumbnails
+    p7zip # for archive extraction and preview
+    jq # for JSON preview
+    poppler # for PDF preview
+    fd # for file searching
+    ripgrep # for file content searching
+    fzf # for quick file subtree navigation
+    zoxide # for historical directories navigation
+    imagemagick # for SVG, Font, HEIC, and JPEG XL preview
+    wl-clipboard # one of xclip, wl-clipboard or xsel, for system clipboard support
+
     # Development
     # TODO Use shell environment or development environments?
     # ---
