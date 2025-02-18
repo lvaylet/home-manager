@@ -109,7 +109,7 @@
     # TODO Use shell environment or development environments?
     # ---
     # Common
-    # dap # FIXME Build generates errors. Use cached version instead? 
+    # dap # FIXME Build generates errors. Use cached version instead?
     git
     gnumake
     just # A command runner similar to Makefile, but simpler - https://github.com/casey/just
