@@ -214,6 +214,7 @@
     yazi = { # 💥 Blazing fast terminal file manager written in Rust, based on async I/O - https://github.com/sxyazi/yazi
       enable = true;
       enableZshIntegration = true;
+      package = pkgs.yazi;
     };
     # zellij = { # A terminal workspace with batteries included - https://github.com/zellij-org/zellij
     #   enable = true;
