@@ -140,7 +140,7 @@
     rustc
     rustfmt
     # Terraform
-    terraform
+    # terraform # FIXME Build takes a lot of time. Use cached version instead?
   ];
 
   programs = {
