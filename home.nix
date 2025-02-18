@@ -293,6 +293,11 @@
     # '';
 
     ".config/starship.toml".source = dotfiles/starship.toml;
+
+    # The configuration files below are not compatible with Yazi 0.3.3 (Nixpkgs 2024-09-04) installed by Home Manager. Use flakes instead to access the latest, bleeding edge version?
+    ".config/yazi/yazi.toml".source = dotfiles/yazi/yazi.toml;
+    ".config/yazi/keymap.toml".source = dotfiles/yazi/keymap.toml;
+    ".config/yazi/theme.toml".source = dotfiles/yazi/theme.toml;
   };
 
   # Home Manager can also manage your environment variables through
