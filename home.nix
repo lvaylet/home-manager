@@ -108,39 +108,60 @@
 
     # Development
     # TODO Use shell environment or development environments?
-    # ---
+    #
     # Common
+    # ---
     # dap # FIXME Build generates errors. Use cached version instead?
-    git
-    gnumake
+    # git
+    # gnumake
     just # A command runner similar to Makefile, but simpler - https://github.com/casey/just
     pre-commit # A framework for managing and maintaining multi-language pre-commit hooks - https://pre-commit.com/
-    tree-sitter
+    # tree-sitter
+    
     # C/C++
-    clang
+    # ---
+    # clang
+    
     # Golang
-    go
+    # ---
+    # go
+    
     # Lua
-    lua
-    luarocks
+    # ---
+    # lua
+    # luarocks
+    
     # Markdown
-    markdownlint-cli2
+    # ---
+    # markdownlint-cli2
+    
     # Nix
+    # ---
     alejandra # The Uncompromising Nix Code Formatter - https://github.com/kamadorueda/alejandra
     nixd # Nix Language Server, based on Nix libraries - https://github.com/nix-community/nixd
+    
     # Node.js
-    nodejs_22
+    # ---
+    # nodejs_22
+    
     # Python
-    python3
+    # ---
+    # python3
+    
     # SQL
-    sqlfluff
+    # ---
+    # sqlfluff
+    
     # Rust
-    cargo
-    clippy
-    rust-analyzer
-    rustc
-    rustfmt
+    # ---
+    # cargo
+    # clippy
+    # rust-analyzer
+    # rustc
+    # rustfmt
+
     # Terraform
+    # ---
     # terraform # FIXME Build takes a lot of time. Use cached version instead?
   ];
 
