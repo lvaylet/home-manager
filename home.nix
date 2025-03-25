@@ -72,6 +72,7 @@
     # Utils
     gum # A tool for glamourous shell scripts - https://github.com/charmbracelet/gum
     psmisc # A set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
+    ncdu # A disk usage analyzer with an ncurses interface
     tree # A recursive directory listing command - https://oldmanprogrammer.net/source.php?dir=projects/tree
     yq-go
 
