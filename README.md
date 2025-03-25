@@ -29,7 +29,7 @@ My declarative and reproducible [Home Manager](https://github.com/nix-community/
     ```sh
     nix-channel --update
     ```
-    
+
 1. Run the Home Manager installation command and create the first Home Manager generation:
 
     ```sh
@@ -49,7 +49,7 @@ My declarative and reproducible [Home Manager](https://github.com/nix-community/
     ```sh
     vim ~/.config/home-manager/home.nix
     ```
-    
+
 1. Rebuild your config and/or make it the current one.
 
     ```sh
