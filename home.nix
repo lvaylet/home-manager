@@ -109,6 +109,10 @@
     # Development
     # TODO Use shell environment or development environments?
     #
+    # In the mean time, any package can be installed temporarily with:
+    # $ nix run nixpkgs#cargo -- new hello-world-example
+    # $ nix run github:nixos/nixpkgs#cargo -- new hello-world-example
+    #
     # Common
     # ---
     # dap # FIXME Build generates errors. Use cached version instead?
