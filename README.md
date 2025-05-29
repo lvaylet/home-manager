@@ -50,6 +50,12 @@ My declarative and reproducible [Home Manager](https://github.com/nix-community/
     vim ~/.config/home-manager/home.nix
     ```
 
+1. Enable extra Nix features
+
+    ```sh
+    echo "extra-experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+    ```
+
 1. Rebuild your config and/or make it the current one.
 
     ```sh
@@ -57,3 +63,11 @@ My declarative and reproducible [Home Manager](https://github.com/nix-community/
     home-manager switch # build and activate configuration
     home-manager switch -b backup # build and activate configuration, backing up non-managed, conflicting files with a `backup` extension
     ```
+
+1. Change the default shell of the current user to `zsh`
+
+    ```sh
+    sudo chsh -s $(which zsh) $(whoami)
+    ```
+
+**NOTE** Depending on the OS, you might have to add the result of $(which zsh) to `etc/shells` too.
